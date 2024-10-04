@@ -117,4 +117,4 @@ async def check_reminders():
                 if user:
                     await user.send(f"Hey {user.mention}, it's time to do your {minutes}-minute Membean session!")
 
-bot.run(TOKEN)
+bot.run()  # Insert token here
