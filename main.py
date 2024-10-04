@@ -93,6 +93,17 @@ async def set_reminder(
     await ctx.respond(f"{ctx.author.mention}, you've set a reminder for Membean at {time} on {day}s.")
 
 
+@bot.slash_command(name="help", description="List all available commands and their descriptions")
+async def help_command(ctx: discord.ApplicationContext):
+    help_message = (
+        "**Here are the available commands:**\n"
+        "/help - Show this help message.\n"
+        "/set_reminder [time] [day] - Set a reminder for Membean.\n"
+        "/display_reminders - Display your current Membean reminders."
+    )
+    await ctx.respond(help_message)
+
+
 @tasks.loop(minutes=1)
 async def check_reminders():
     current_time = datetime.now().strftime("%I:%M %p")

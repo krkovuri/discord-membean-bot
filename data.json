@@ -3,7 +3,8 @@
         "703368583899775026": {
             "membean_minutes": 15,
             "reminders": {
-                "Sunday": "08:00 PM"
+                "Sunday": "08:00 PM",
+                "Thursday": "07:38 PM"
             }
         }
     }
